@@ -1,4 +1,4 @@
-package example_test
+package main
 
 import (
 	"fmt"
@@ -9,6 +9,14 @@ import (
 	"github.com/huin/goupnp/dcps/internetgateway1"
 	"github.com/huin/goupnp/dcps/internetgateway2"
 )
+
+func main() {
+	ExampleWANPPPConnection1_GetExternalIPAddress()
+	ExampleWANIPConnection1_GetExternalIPAddress()
+	Example_reuseDiscoveredDevice()
+	ExampleWANCommonInterfaceConfig1_getBytesTransferred_internetgateway1()
+	ExampleWANCommonInterfaceConfig1_getBytesTransferred_internetgateway2()
+}
 
 // Use discovered WANPPPConnection1 services to find external IP addresses.
 func ExampleWANPPPConnection1_GetExternalIPAddress() {
